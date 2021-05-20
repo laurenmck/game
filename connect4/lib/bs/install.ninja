@@ -1,0 +1,41 @@
+rescript = 1
+rule cp
+  command = cmd.exe /C copy /Y $i $out >NUL
+rule touch
+ command = cmd.exe /C type nul >>$out & copy $out+,, >NUL
+o Demo-Connect4.cmi : cp ..\bs\src\Demo-Connect4.cmi
+o Demo-Connect4.cmj : cp ..\bs\src\Demo-Connect4.cmj
+o Demo-Connect4.cmt : cp ..\bs\src\Demo-Connect4.cmt
+o Demo.re : cp ..\..\src\Demo.re
+o Referee-Connect4.cmi : cp ..\bs\src\Referee-Connect4.cmi
+o Referee-Connect4.cmj : cp ..\bs\src\Referee-Connect4.cmj
+o Referee-Connect4.cmt : cp ..\bs\src\Referee-Connect4.cmt
+o Referee.re : cp ..\..\src\Referee.re
+o SigGame-Connect4.cmi : cp ..\bs\src\SigGame-Connect4.cmi
+o SigGame-Connect4.cmj : cp ..\bs\src\SigGame-Connect4.cmj
+o SigGame-Connect4.cmt : cp ..\bs\src\SigGame-Connect4.cmt
+o SigGame.re : cp ..\..\src\SigGame.re
+o AIPlayer-Connect4.cmi : cp ..\bs\src\AIPlayer-Connect4.cmi
+o AIPlayer-Connect4.cmj : cp ..\bs\src\AIPlayer-Connect4.cmj
+o AIPlayer-Connect4.cmt : cp ..\bs\src\AIPlayer-Connect4.cmt
+o AIPlayer.re : cp ..\..\src\AIPlayer.re
+o Connect4-Connect4.cmi : cp ..\bs\src\Connect4-Connect4.cmi
+o Connect4-Connect4.cmj : cp ..\bs\src\Connect4-Connect4.cmj
+o Connect4-Connect4.cmt : cp ..\bs\src\Connect4-Connect4.cmt
+o Connect4.re : cp ..\..\src\Connect4.re
+o SigPlayer-Connect4.cmi : cp ..\bs\src\SigPlayer-Connect4.cmi
+o SigPlayer-Connect4.cmj : cp ..\bs\src\SigPlayer-Connect4.cmj
+o SigPlayer-Connect4.cmt : cp ..\bs\src\SigPlayer-Connect4.cmt
+o SigPlayer.re : cp ..\..\src\SigPlayer.re
+o HumanPlayer-Connect4.cmi : cp ..\bs\src\HumanPlayer-Connect4.cmi
+o HumanPlayer-Connect4.cmj : cp ..\bs\src\HumanPlayer-Connect4.cmj
+o HumanPlayer-Connect4.cmt : cp ..\bs\src\HumanPlayer-Connect4.cmt
+o HumanPlayer.re : cp ..\..\src\HumanPlayer.re
+o CS17SetupGame-Connect4.cmi : cp ..\bs\src\CS17SetupGame-Connect4.cmi
+o CS17SetupGame-Connect4.cmj : cp ..\bs\src\CS17SetupGame-Connect4.cmj
+o CS17SetupGame-Connect4.cmt : cp ..\bs\src\CS17SetupGame-Connect4.cmt
+o CS17SetupGame.re : cp ..\..\src\CS17SetupGame.re
+o Connect4.cmi : cp ..\bs\Connect4.cmi
+o Connect4.cmj : cp ..\bs\Connect4.cmj
+o Connect4.cmt : cp ..\bs\Connect4.cmt
+build install.stamp : touch Demo-Connect4.cmi Demo-Connect4.cmj Referee-Connect4.cmi Referee-Connect4.cmj SigGame-Connect4.cmi SigGame-Connect4.cmj AIPlayer-Connect4.cmi AIPlayer-Connect4.cmj Connect4-Connect4.cmi Connect4-Connect4.cmj SigPlayer-Connect4.cmi SigPlayer-Connect4.cmj HumanPlayer-Connect4.cmi HumanPlayer-Connect4.cmj CS17SetupGame-Connect4.cmi CS17SetupGame-Connect4.cmj Connect4.cmi Connect4.cmj
